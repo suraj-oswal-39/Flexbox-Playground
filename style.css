@@ -1,0 +1,630 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    position: relative;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(245, 245, 245);
+    overflow-x: hidden;
+}
+
+.title-stroke-1 {
+    position: absolute;
+    left: 38%;
+    top: 6%;
+    font-size: 48px;
+    font-weight: 900;
+    font-family: "Comic Neue", cursive;
+    z-index: 2;
+    -webkit-text-stroke: 28px #ffcc00;
+}
+
+.title-1 {
+    position: absolute;
+    left: 38%;
+    top: 6%;
+    font-size: 48px;
+    font-weight: 900;
+    font-family: "Comic Neue", cursive;
+    color: #000000;
+    z-index: 2;
+}
+
+.title-stroke-2 {
+    position: absolute;
+    left: 44%;
+    top: 15%;
+    font-size: 48px;
+    font-weight: 900;
+    font-family: "Comic Neue", cursive;
+    z-index: 2;
+    -webkit-text-stroke: 28px #ffcc00;
+}
+
+.title-2 {
+    position: absolute;
+    left: 44%;
+    top: 15%;
+    font-size: 48px;
+    font-weight: 900;
+    font-family: "Comic Neue", cursive;
+    color: #000000;
+    z-index: 2;
+}
+
+.openGround {
+    position: absolute;
+    right: 82.172%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    width: 200px;
+    height: 200px;   
+    border: 10px solid;
+    border-radius: 50%;
+    border-top-color: #ff0000;
+    border-right-color: #06e906;
+    border-bottom-color: #003cff;
+    border-left-color: #ffcc00;
+    transform: translate(42vw, 35vh);
+    box-shadow: #000000 0 0 7px 3px;
+    cursor: pointer;
+    transition: right 0.5s linear 0.09s;
+    z-index: 2;
+}
+
+.openGround > svg {
+    width: 85px;
+    height: 85px;
+}
+
+
+.openGround:hover path {
+    fill: #000000;
+}
+
+.openGround:active {
+    box-shadow: #000000 0 0 0px 0px;
+}
+
+.leftSlider {
+    position: absolute;
+    left: 0;
+    background-color: #ffffff;
+    width: 50.01%;
+    height: 100vh;
+    transition: left 0.5s linear;
+    z-index: 1;
+}
+
+.rightSlider {
+    position: absolute;
+    right: 0;
+    background-color: #ffffff;
+    width: 50.01%;
+    height: 100vh;
+    transition: right 0.5s linear;
+    z-index: 1;
+}
+
+.left-container {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    height: 100%;
+    transform: scale(0.9);
+    transition: transform 0.5s linear 0.1s;
+}
+
+.right-container {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    height: 100%;
+    transform: scale(0.9);
+    transition: transform 0.5s linear 0.1s;
+}
+
+/*--------------------------------------------------------------------*/
+
+.view {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ff0000;
+    border-radius: 32px;
+    box-shadow: inset 0px 0px 10px 10px rgba(0, 0, 0, 0.5);
+    height: 70%;
+    margin: 16px 8px 8px 16px;
+    overflow: hidden;
+}
+
+.view-setting {
+    position: relative;
+    background-color: #ffcc00;
+    border-radius: 32px;
+    box-shadow: inset 0px 0px 10px 10px rgba(0, 0, 0, 0.5);
+    height: 30%;
+    margin: 8px 8px 16px 16px;
+}
+
+.resetBtn {
+    position: absolute;
+    bottom: 8px;
+    right: 16px;
+    background-color: #ffffff;
+    border: 2px solid #000000;
+    border-radius: 12px;
+    font-family: monospace;
+    padding: 8px;
+    cursor: pointer;
+}
+
+.resetBtn:hover {
+    background-color: #f7d54f;
+}
+
+.resetBtn:active {
+    background-color: #ffffff;
+}
+
+.CSS-code-view {
+    background-color: #06e906;
+    border-radius: 32px;
+    box-shadow: inset 0px 0px 10px 10px rgba(0, 0, 0, 0.5);
+    margin: 16px 16px 8px 8px;
+}
+
+.flex-control-box {
+    display: flex;
+    background-color: #003cff;
+    border-radius: 32px;
+    box-shadow: inset 0px 0px 10px 10px rgba(0, 0, 0, 0.5);
+    width: 344.820px;
+    height: 100%;
+    margin: 8px 16px 16px 8px;
+    overflow: hidden;
+}
+
+/*--------------------------------------------------------------------*/
+
+.flex-view {
+    display: flex;
+    border: 4px solid #ffffff;
+    min-width: 300px;
+    min-height: 300px;
+    box-shadow: inset 0px 0px 10px 10px rgba(0, 0, 0, 0.5);
+}
+
+.item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(123, 19, 199);
+    border: 4px solid rgb(84, 0, 143);
+    color: #ffffff;
+    font-size: 18px;
+    min-width: 52.3px;
+    min-height: 52.3px;
+}
+
+.code-here {
+    font-size: 14px;
+    margin: 16px 16px 16px 28px;
+}
+
+.clsList {
+    padding-left: 28px;
+}
+
+.controller {
+    display: flex;
+    flex-direction: column;
+    margin: 16px 32px;
+    width: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.controller::-webkit-scrollbar {
+    background-color: transparent;
+    border: #ffffff 2px solid;
+    border-radius: 12px;
+}
+
+.controller::-webkit-scrollbar-thumb {
+    background-color: #ffffff;
+    border-radius: 12px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.flex-name {
+    color: #ffffff;
+    margin: 4px 0px;
+    font-size: 13px;
+}
+
+.row1, .row2, .row3, .row4, .row5 {
+    display: flex;
+}
+
+.row6 {
+    display: none;
+}
+
+.flex-name-self {
+    display: none;
+    color: #ffffff;
+    margin: 4px 0px;
+    font-size: 13px;
+}
+
+.svg-img {
+    background-color: #0032d5;
+    width: 25px;
+    height: 25px;
+    border: 2px solid #ffffff;
+    padding: 4px;
+}
+
+.svg-img:hover {
+    border: 4px solid #ffffff;
+}
+
+.r1a, .r1b, .r1c, .r1d,
+.r2a, .r2b,
+.r3a, .r3b, .r3c, .r3d, .r3e, .r3f,
+.r4a, .r4b, .r4c, .r4d, .r4e, .r4f,
+.r5a, .r5b, .r5c, .r5d, .r5e,
+.r6a, .r6b, .r6c, .r6d, .r6e {
+    position: relative;
+    cursor: pointer;
+}
+
+[class^="flowing-name"] {
+    position: absolute;
+    display: none;
+    background: #003cff;
+    width: max-content;
+    border: 2px solid #ffffff;
+    border-radius: 8px;
+    color: #ffffff;
+    font-size: 14px;
+    padding: 8px;
+    box-shadow: inset 0px 0px 3px 3px rgba(0, 0, 0, 0.5);
+    z-index: 10;
+    pointer-events: none;
+}
+
+
+.r1a:hover .flowing-name1 {
+    display: block;
+    bottom: -36px;
+}
+
+.r1b:hover .flowing-name2 {
+    display: block;
+    left: -37px;
+}
+
+.r1c:hover .flowing-name3 {
+    display: block;
+    left: -73px;
+    font-size: 12px;
+}
+
+.r1d:hover .flowing-name4 {
+    display: block;
+    font-size: 11px;
+    left: -110px;
+}
+
+.r2a:hover .flowing-name5 {
+    display: block;
+    bottom: 48px;
+}
+
+.r2b:hover .flowing-name6 {
+    display: block;
+    bottom: 48px;
+    left: -37px;
+}
+
+.r3a:hover .flowing-name7 {
+    display: block;
+    bottom: 48px;
+}
+
+.r3b:hover .flowing-name8 {
+    display: block;
+    bottom: 48px;
+    left: -37px;
+    font-size: 13px;
+}
+
+.r3c:hover .flowing-name9 {
+    display: block;
+    bottom: 48px;
+    left: -73px;
+}
+
+.r3d:hover .flowing-name10 {
+    display: block;
+    bottom: 48px;
+    left: -110px;
+    font-size: 12px;
+}
+
+.r3e:hover .flowing-name11 {
+    display: block;
+    bottom: 48px;
+    left: -147px;
+    font-size: 12px;
+}
+
+.r3f:hover .flowing-name12 {
+    display: block;
+    bottom: 48px;
+    left: -184px;
+}
+
+.r4a:hover .flowing-name13 {
+    display: block;
+    bottom: 48px;
+}
+
+.r4b:hover .flowing-name14 {
+    display: block;
+    bottom: 48px;
+    left: -37px;
+    font-size: 12px;
+}
+
+.r4c:hover .flowing-name15 {
+    display: block;
+    bottom: 48px;
+    left: -73px;
+    font-size: 13px;
+}
+
+.r4d:hover .flowing-name16 {
+    display: block;
+    bottom: 48px;
+    left: -110px;
+    font-size: 11px;
+}
+
+.r4e:hover .flowing-name17 {
+    display: block;
+    bottom: 48px;
+    left: -146px;
+    font-size: 11px;
+}
+
+.r4f:hover .flowing-name18 {
+    display: block;
+    bottom: 48px;
+    left: -183px;
+    font-size: 11px;
+}
+
+.r5a:hover .flowing-name19 {
+    display: block;
+    bottom: 48px;
+}
+
+.r5b:hover .flowing-name20 {
+    display: block;
+    bottom: 48px;
+    left: -37px;
+}
+
+.r5c:hover .flowing-name21 {
+    display: block;
+    bottom: 48px;
+    left: -73px;
+}
+
+.r5d:hover .flowing-name22 {
+    display: block;
+    bottom: 48px;
+    left: -110px;
+}
+
+.r5e:hover .flowing-name23 {
+    display: block;
+    bottom: 48px;
+    left: -147px;
+}
+
+.r6a:hover .flowing-name24 {
+    display: block;
+    bottom: 48px;
+}
+
+.r6b:hover .flowing-name25 {
+    display: block;
+    bottom: 48px;
+    left: -37px;
+}
+
+.r6c:hover .flowing-name26 {
+    display: block;
+    bottom: 48px;
+    left: -73px;
+}
+
+.r6d:hover .flowing-name27 {
+    display: block;
+    bottom: 48px;
+    left: -110px;
+}
+
+.r6e:hover .flowing-name28 {
+    display: block;
+    bottom: 48px;
+    left: -147px;
+}
+
+.st1, .st2 {
+    display: flex;
+    column-gap: 16px;
+    font-size: 14px;
+    margin: 10px 32px;
+}
+
+.stBox1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 14px;
+    border-right: 2px solid #000000;
+    padding-right: 16px;
+}
+
+.stBox1a {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    border-right: 2px solid #000000;
+    padding-right: 16px;
+}
+
+.stBox2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 14px;
+} 
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"]:focus-visible {
+    border: #000000 2px solid;
+    outline: none;
+}
+
+.boxSetting {
+    background-color: transparent;
+    border: 2px solid #000000;
+    border-radius: 12px;
+    width: 38px;
+    height: 38px;
+    font-size: 16px;
+    text-align: center;
+    padding-block: 0px;
+    padding-inline: 0px;
+}
+
+.s2, .s3 {
+    width: 88px
+}
+
+.flexSt {
+    display: flex;
+    column-gap: 16px;
+}
+
+.stBox2a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-right: 2px solid #000000;
+    padding-right: 16px;
+}
+
+.switchOutline {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 32px;
+    width: 64px;
+    border: 2px solid #000000;
+    border-radius: 24px;
+    cursor: pointer;
+}
+
+.switchBg {
+    background-color: #ffffff;
+    width: 32px;
+    height: 32px;
+    border-radius: 24px;
+    transition: width 0.2s linear;
+}
+
+.dot {
+    position: absolute;
+    left: 1.5px;
+    background-color: #ff0000;
+    width: 24px;
+    height: 24px;
+    border: 2px solid #000000;
+    border-radius: 24px;
+    transition: left 0.2s linear;
+}
+
+.stBox2b {
+    display: flex;
+    column-gap: 16px;
+    border-right: 2px solid #000000;
+    padding-right: 16px;
+}
+
+.stBox2ba {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.s9 {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    cursor: pointer;
+}
+
+.unitList {
+    position: absolute;
+    bottom: 54px;
+    right: 254px;
+    display: flex;
+    flex-direction: column-reverse;
+    background-color: #ffcc00;
+    border: 2px solid #000000;
+    border-radius: 12px;
+    width: 77px;
+    height: 0px;
+    transition: all 0.2s linear;
+    opacity: 0;
+    cursor: default;
+}
+
+.unitList li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    width: 100%;
+    height: 100%;
+}
+
+.unitList li:hover {
+    background-color: #ffffff;
+}
+

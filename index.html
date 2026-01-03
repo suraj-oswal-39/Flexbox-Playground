@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox layout</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="text">
+        <p class="title-stroke-1">
+            Flexbox
+            <p class="title-1">
+                Flexbox
+            </p>
+        </p>
+        <p class="title-stroke-2">
+            Playground
+            <p class="title-2">
+                Playground
+            </p>
+        </p>
+    </div>
+   
+    <div class="openGround">
+        <?xml version="1.0" encoding="UTF-8"?>
+        <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+        <svg xmlns="http://www.w3.org/2000/svg"
+            style="background: transparent; background-color: transparent; color-scheme: light dark;"
+            xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="24px" height="24px" viewBox="0 0 24 24">
+            <g>
+                <g data-cell-id="0">
+                    <g data-cell-id="1">
+                        <g data-cell-id="uySK5mPCx9p-o8bHv3bG-2">
+                            <g>
+                                <path
+                                    d="M 2 12 L 2 6 Q 2 0 10.94 4.47 L 18.47 8.24 Q 26 12 17.06 16.47 L 9.53 20.24 Q 2 24 2 18 Z"
+                                    fill="none" stroke="#000000" stroke-width="2" pointer-events="all" />
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </svg>
+    </div>
+    <div class="leftSlider"></div>
+    <div class="rightSlider"></div>
+
+    <div class="left-container">
+
+        <div class="view">
+            <div class="flex-view">
+                <div class="item box1">1</div>
+                <div class="item box2">2</div>
+                <div class="item box3">3</div>
+            </div>
+        </div>
+
+        <form class="view-setting">
+            <div class="st1">
+                <div class="stBox1">
+                    <p>Boxes: count</p>
+                    <input type="number" class="boxSetting s1" min="0"
+                        onchange="if(this.value > 999) this.value = 999; if(this.value < 0) this.value = 0;" max="999"
+                        value="3">
+                </div>
+                <div class="stBox1">
+                    <p>Boxes: min-width</p>
+                    <input type="number" class="boxSetting s2" min="52.30" value="52.3" step="0.01"
+                        onchange="if(this.value < 52.3) this.value = 52.3;">
+                </div>
+                <div class="stBox1">
+                    <p>Boxes: min-height</p>
+                    <input type="number" class="boxSetting s3" min="52.30" value="292.32" step="0.01"
+                        onchange="if(this.value < 52.3) this.value = 52.3;">
+                </div>
+                <div class="stBox1a">
+                    <p>Flex view size fix</p>
+                    <div class="switchOutline">
+                        <div class="switchBg"></div>
+                        <div class="dot"></div>
+                    </div>
+                </div>
+                <div class="stBox1">
+                    <p>Boxes number</p>
+                    <input type="number" class="boxSetting s4" min="0"
+                        onchange="if(this.value > 999) this.value = 999; if(this.value < 0) this.value = 0;" max="999"
+                        value="0">
+                </div>
+            </div>
+
+            <div class="st2">
+                <div class="stBox2">
+                    <p>Flex-grow:</p>
+                    <div class="flexSt">
+                        <div class="stBox2a">
+                            <p>Box number</p>
+                            <input type="number" class="boxSetting s5" min="0" value="0" step="0.1"
+                                onchange="if(this.value < 0) this.value = 0;">
+                        </div>
+                        <div class="stBox2a">
+                            <p>Grow number</p>
+                            <input type="number" class="boxSetting s6" min="0" value="0" step="0.1"
+                                onchange="if(this.value < 0) this.value = 0;">
+                        </div>
+                    </div>
+                </div>
+                <div class="stBox2">
+                    <p>Flex-shrink:</p>
+                    <div class="stBox2a">
+                        <p>Shrink number</p>
+                        <input type="number" class="boxSetting s7" min="0" value="0" step="0.1"
+                            onchange="if(this.value < 0) this.value = 0;">
+                    </div>
+                </div>
+                <div class="stBox2">
+                    <p>Flex-basis:</p>
+                    <div class="stBox2b">
+                        <div class="stBox2ba">
+                            <p>Basis number</p>
+                            <input type="number" class="boxSetting s8" min="0" value="0" step="0.1"
+                                onchange="if(this.value < 0) this.value = 0;">
+                        </div>
+                        <div class="stBox2ba">
+                            <p>Basis unit</p>
+                            <div class="boxSetting s9">null</div>
+                            <ul class="unitList">
+                                <li value="null">null</li>
+                                <li value="0">0</li>
+                                <li value="px">px</li>
+                                <li value="%">%</li>
+                                <li value="rem">rem</li>
+                                <li value="em">em</li>
+                                <li value="auto">auto</li>
+                                <li value="content">content</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button type="reset" class="resetBtn">Reset</button>
+        </form>
+
+    </div>
+    <div class="right-container">
+
+        <div class="CSS-code-view">
+            <div class="code-here">
+                .flex-view {
+                <ul class="clsList">
+                    <li>display: flex;</li>
+                </ul>
+                }
+            </div>
+
+        </div>
+        <div class="flex-control-box">
+            <div class="controller">
+
+                <p class="flex-name">flex-direction: row;</p>
+                <div class="row1">
+                    <div class="r1a">
+                        <img src="/svg/flex-direction/flex-direction-row.svg" class="svg-img row-direction">
+                        <p class="flowing-name1">Add flex-direction: row;</p>
+                    </div>
+                    <div class="r1b">
+                        <img src="/svg/flex-direction/flex-direction-column.svg" class="svg-img column-direction">
+                        <p class="flowing-name2">Add flex-direction: column;</p>
+                    </div>
+                    <div class="r1c">
+                        <img src="/svg/flex-direction/flex-direction-reverse-row.svg"
+                            class="svg-img row-reverse-direction">
+                        <p class="flowing-name3">Add flex-direction: row-reverse;</p>
+                    </div>
+                    <dv class="r1d">
+                        <img src="/svg/flex-direction/flex-direction-reverse-column.svg"
+                            class="svg-img column-reverse-direction">
+                        <p class="flowing-name4">Add flex-direction: column-reverse;</p>
+                    </dv>
+                </div>
+
+                <p class="flex-name">flex-wrap: nowrap;</p>
+                <div class="row2">
+                    <div class="r2a">
+                        <img src="/svg/flex-wrap/flex-nowrap.svg" class="svg-img flex-nowrap">
+                        <p class="flowing-name5">Add flex-wrap: nowrap;</p>
+                    </div>
+                    <div class="r2b">
+                        <img src="/svg/flex-wrap/flex-wrap.svg" class="svg-img flex-wrap">
+                        <p class="flowing-name6">Add flex-wrap: wrap;</p>
+                    </div>
+                </div>
+
+                <p class="flex-name">align-content: stretch;</p>
+                <div class="row3">
+                    <div class="r3a">
+                        <img src="/svg/align-content/flex-center.svg" class="svg-img flex-center">
+                        <p class="flowing-name7">Add align-content: center;</p>
+                    </div>
+                    <div class="r3b">
+                        <img src="/svg/align-content/flex-start.svg" class="svg-img flex-start">
+                        <p class="flowing-name8">Add align-content: flex-start;</p>
+                    </div>
+                    <div class="r3c">
+                        <img src="/svg/align-content/flex-end.svg" class="svg-img flex-end">
+                        <p class="flowing-name9">Add align-content: flex-end;</p>
+                    </div>
+                    <div class="r3d">
+                        <img src="/svg/align-content/flex-space-around.svg" class="svg-img flex-space-around">
+                        <p class="flowing-name10">Add align-content: space-around;</p>
+                    </div>
+                    <div class="r3e">
+                        <img src="/svg/align-content/flex-space-between.svg" class="svg-img flex-space-between">
+                        <p class="flowing-name11">Add align-content: space-between;</p>
+                    </div>
+                    <div class="r3f">
+                        <img src="/svg/align-content/flex-stretch.svg" class="svg-img flex-stretch">
+                        <p class="flowing-name12">Add align-content: stretch;</p>
+                    </div>
+                </div>
+
+                <p class="flex-name">justify-content: flex-start;</p>
+                <div class="row4">
+                    <div class="r4a">
+                        <img src="/svg/align-content/flex-center-2.svg" class="svg-img flex-center-2">
+                        <p class="flowing-name13">Add justify-content: center;</p>
+                    </div>
+                    <div class="r4b">
+                        <img src="/svg/align-content/flex-start-2.svg" class="svg-img flex-start-2">
+                        <p class="flowing-name14">Add justify-content: flex-start;</p>
+                    </div>
+                    <div class="r4c">
+                        <img src="/svg/align-content/flex-end-2.svg" class="svg-img flex-end-2">
+                        <p class="flowing-name15">Add justify-content: flex-end;</p>
+                    </div>
+                    <div class="r4d">
+                        <img src="/svg/align-content/flex-space-between-2.svg" class="svg-img flex-space-between-2">
+                        <p class="flowing-name16">Add justify-content: space-between;</p>
+                    </div>
+                    <div class="r4e">
+                        <img src="/svg/align-content/flex-space-around-2.svg" class="svg-img flex-space-around-2">
+                        <p class="flowing-name17">Add justify-content: space-around;</p>
+                    </div>
+                    <div class="r4f">
+                        <img src="/svg/justify-content/flex-space-evenly.svg" class="svg-img flex-space-evenly">
+                        <p class="flowing-name18">Add justify-content: space-evenly;</p>
+                    </div>
+                </div>
+
+                <p class="flex-name">align-items: stretch;</p>
+                <div class="row5">
+                    <div class="r5a">
+                        <img src="/svg/align-items/align-items-center.svg" class="svg-img align-items-center">
+                        <p class="flowing-name19">Add align-items: center;</p>
+                    </div>
+                    <div class="r5b">
+                        <img src="/svg/align-items/align-items-flex-start.svg" class="svg-img align-items-flex-start">
+                        <p class="flowing-name20">Add align-items: flex-start;</p>
+                    </div>
+                    <div class="r5c">
+                        <img src="/svg/align-items/align-items-flex-end.svg" class="svg-img align-items-flex-end">
+                        <p class="flowing-name21">Add align-items: flex-end;</p>
+                    </div>
+                    <div class="r5d">
+                        <img src="/svg/align-items/align-items-stretch.svg" class="svg-img align-items-stretch">
+                        <p class="flowing-name22">Add align-items: stretch;</p>
+                    </div>
+                    <div class="r5e">
+                        <img src="/svg/align-items/align-items-baseline.svg" class="svg-img align-items-baseline">
+                        <p class="flowing-name23">Add align-items: baseline;</p>
+                    </div>
+                </div>
+
+                <p class="flex-name-self">align-self</p>
+                <div class="row6">
+                    <div class="r6a">
+                        <p class="flowing-name24">Add align-self: center;</p>
+                        <img src="/svg/align-self/self-center.svg" class="svg-img align-self-center">
+                    </div>
+                    <div class="r6b">
+                        <img src="/svg/align-self/self-start.svg" class="svg-img align-self-start">
+                        <p class="flowing-name25">Add align-self: self-start;</p>
+                    </div>
+                    <div class="r6c">
+                        <img src="/svg/align-self/self-end.svg" class="svg-img align-self-end">
+                        <p class="flowing-name26">Add align-self: self-end;</p>
+                    </div>
+                    <div class="r6d">
+                        <img src="/svg/align-self/self-stretch.svg" class="svg-img align-self-stretch">
+                        <p class="flowing-name27">Add align-self: stretch;</p>
+                    </div>
+                    <div class="r6e">
+                        <img src="/svg/align-items/align-items-baseline.svg" class="svg-img align-self-baseline">
+                        <p class="flowing-name28">Add align-self: baseline;</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
