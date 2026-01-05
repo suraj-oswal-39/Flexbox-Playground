@@ -21,7 +21,7 @@ body {
     top: 6%;
     font-size: 48px;
     font-weight: 900;
-    font-family: Consolas, "Comic Neue", cursive;
+    font-family: "Comic Neue", cursive;
     z-index: 2;
     -webkit-text-stroke: 28px #ffcc00;
 }
@@ -32,7 +32,7 @@ body {
     top: 6%;
     font-size: 48px;
     font-weight: 900;
-    font-family: Consolas, "Comic Neue", cursive;
+    font-family: "Comic Neue", cursive;
     color: #000000;
     z-index: 2;
 }
@@ -43,7 +43,7 @@ body {
     top: 15%;
     font-size: 48px;
     font-weight: 900;
-    font-family: Consolas, "Comic Neue", cursive;
+    font-family: "Comic Neue", cursive;
     z-index: 2;
     -webkit-text-stroke: 28px #ffcc00;
 }
@@ -54,7 +54,7 @@ body {
     top: 15%;
     font-size: 48px;
     font-weight: 900;
-    font-family: Consolas, "Comic Neue", cursive;
+    font-family: "Comic Neue", cursive;
     color: #000000;
     z-index: 2;
 }
